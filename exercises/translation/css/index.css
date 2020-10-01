@@ -135,3 +135,20 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 28px;
     padding: 0px;
 }
+
+.correct,.wrong {
+    text-align: center;
+}
+
+.correctanswer,.wronganswer {
+    font-family: "Microsoft Yahei","Courier";
+    font-size: 28px;
+}
+
+.correctanswer {
+    color: #00ff00;
+}
+
+.wronganswer {
+    color: #ff0000;
+}

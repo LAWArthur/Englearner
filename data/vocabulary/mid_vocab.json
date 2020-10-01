@@ -6,12 +6,10 @@
             "meanings": [
                 {
                     "translations": ["一","一个"],
-                    "type": "adj",
-                    "changes": {
-                        "phonics":["an"]
-                    }
+                    "type": "adj"
                 }
-            ]
+            ],
+            "phonic_changes": ["an"]
         }
     ]
 }

@@ -36,10 +36,13 @@ function getVocabularies(){
 
 function initializeExercise(){
     $(".vocabname").text(vocabulary.name);
+    $(".check").click(check);
     generate();
 }
 
 function generate(){
+    $(".correct").hide();
+    $(".wrong").hide();
     current = vocabulary.vocabulary[Math.floor(Math.random()*vocabulary.vocabulary.length)];
     let meaning = current.meanings[Math.floor(Math.random()*current.meanings.length)];
     let translation = meaning.translations[Math.floor(Math.random()*meaning.translations.length)];
@@ -48,13 +51,26 @@ function generate(){
 }
 
 function check(){
-    let answer = $("trans").val();
+    let answer = $(".trans").val();
     if(showFirst) answer = current.word[0] + answer;
-    if(answer==current.word){
-        console.log("right");
 
+    if(answer==current.word){
+        correct();
+        return;
     }
-    else {
-        console.log("wrong");
+    if(current.phonic_changes){
+        if(current.phonic_changes.includes(answer)){
+            correct();
+            return;
+        }
     }
+    wrong();
+}
+
+function correct(){
+    $(".correct").show();
+}
+
+function wrong(){
+    $(".wrong").show();
 }
