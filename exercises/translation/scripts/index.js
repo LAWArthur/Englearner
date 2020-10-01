@@ -18,7 +18,7 @@ const vocabularies={
             else console.log(`Error ${status}`);
         });
 
-        
+        $(".settings").hide();        
     })
 }))();
 
