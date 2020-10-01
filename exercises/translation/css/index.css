@@ -1,0 +1,194 @@
+body {
+    background: #eeffee;
+    background-size: contain;
+    background-position: center;
+}
+
+.content {
+    width: 95%;
+    margin: 0% 2.5% 0% 2.5%;
+}
+
+.warning {
+    padding: 20px;
+    margin: -10px -10px 0px -10px;
+    width: 100%;
+    background: #ccffcc;
+    font-family: 'Microsoft YaHei';
+    position: fixed;
+}
+
+.header {
+    margin: 0px 0px 0px 0px;
+    font-family: "Microsoft YaHei";
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+td {
+    width: 49%;
+    margin: 0px 0.5% 0px 0.5%;
+    vertical-align: top;
+}
+
+td:hover {
+    width: 49%;
+    margin: 0px 0.5% 0px 0.5%;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+td:active {
+    width: 49%;
+    margin: 0px 0.5% 0px 0.5%;
+    vertical-align: top;
+    cursor: pointer;
+    background: #cccccc;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 10px;
+    padding: 0px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: right;
+    font-size: 10px;
+    color: darkslategrey;
+}
+
+.display {
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 2px grey);
+}
+
+.navigator {
+    display: inline-block;
+    list-style: none;
+    padding: 0px;
+    border: 1px solid #aaaaaa;
+    margin: 0px;
+}
+
+.navigator li {
+    width: 100px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+}
+
+.navigator a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    list-style: none;
+    margin: 30px;
+    display: block;
+    background: #999999cc;
+    padding: 20px;
+    font-family: "Microsoft Yahei","Courier";
+}
+
+.menu li {
+    margin: 50px;
+    border-left: 10px solid #333333;
+    background: #cccccccc;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu .title {
+    text-align: left;
+    padding: 5px;
+    font-size: 24px;
+}
+
+.menu .title .field {
+    margin: 10px;
+    display: inline;
+    font-size: 16px;
+    color: grey;
+}
+
+.menu .origin {
+    text-align: right;
+    font-size: 12px;
+    padding: 5px;
+    color: #111111;
+}
+
+.menu .difficulty {
+    text-align: right;
+    font-size: 14px;
+    padding: 2px;
+    color: black;
+}
+
+.difficulty * {
+    color: white;
+    border-radius: 2px;
+    padding: 1px 2px;
+}
+
+.difficulty .easy {
+    background: lime;
+}
+
+.difficulty .medium {
+    background: yellowgreen;
+}
+
+.difficulty .hard {
+    background: firebrick;
+}
+
+.difficulty .beginner {
+    background: grey;
+}
+
+.difficulty .semijunior {
+    background: orange;
+}
+
+.difficulty .junior {
+    background: yellowgreen;
+}
+
+.difficulty .senior {
+    background: lime;
+}
+
+.difficulty .semiselection {
+    background: deepskyblue;
+}
+
+.difficulty .selection {
+    background: purple;
+}
+
+.difficulty .noi {
+    background:  darkslateblue;
+}
+
+blockquote {
+    background: #eeeeeecc;
+    border-left: 3px solid #cccccc;
+    padding: 10px;
+    font-family: "楷体";
+}
+
+.content>.title {
+    font-size: 36px;
+    padding: 10px;
+}
