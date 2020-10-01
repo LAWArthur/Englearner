@@ -11,7 +11,7 @@ const vocabularies={
         showFirst = $("#showfirst").prop("checked");
         loadFormer = $("#loadformer").prop("checked");
         console.log(showFirst,loadFormer);
-        $.get(`../../data/vocabulary/${$("vocabulary").val()}.json`,(data,status) => {
+        $.get(`../../data/vocabulary/${$("#vocabulary").val()}.json`,(data,status) => {
             if(status>=200&&status<400){
                 console.log(data,status);
             }
