@@ -51,7 +51,7 @@ function generate(){
 }
 
 function check(){
-    let answer = $(".trans").val();
+    let answer = $("#trans").val();
     if(showFirst) answer = current.word[0] + answer;
 
     if(answer==current.word){
