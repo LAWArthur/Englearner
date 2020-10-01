@@ -12,7 +12,7 @@ const vocabularies={
         loadFormer = $("#loadformer").prop("checked");
         console.log(showFirst,loadFormer);
         $.get(`../../data/vocabulary/${$("#vocabulary").val()}.json`,(data,status) => {
-            if(status>=200&&status<400){
+            if(status=="success"){
                 console.log(data,status);
             }
             else console.log(`Error ${status}`);
