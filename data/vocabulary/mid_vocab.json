@@ -5,9 +5,11 @@
             "word": "a",
             "meanings": [
                 {
-                    "translations": ["一个"],
+                    "translations": ["一","一个"],
                     "type": "adj",
-                    "changes": []
+                    "changes": {
+                        "phonics":["an"]
+                    }
                 }
             ]
         }

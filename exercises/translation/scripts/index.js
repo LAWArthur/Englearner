@@ -44,5 +44,17 @@ function generate(){
     let meaning = current.meanings[Math.floor(Math.random()*current.meanings.length)];
     let translation = meaning.translations[Math.floor(Math.random()*meaning.translations.length)];
     $(".question").text(`${meaning.type}. ${onetranslation?translation:meaning.translations.join("；")}`);
+    if(showFirst) $("#firstletter").text(current.word[0]);
+}
 
+function check(){
+    let answer = $("trans").val();
+    if(showFirst) answer = current.word[0] + answer;
+    if(answer==current.word){
+        console.log("right");
+
+    }
+    else {
+        console.log("wrong");
+    }
 }

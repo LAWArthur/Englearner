@@ -125,3 +125,13 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 36px;
     text-align: center;
 }
+
+.answer {
+    text-align: center;
+}
+
+.trans {
+    font-family: "Microsoft Yahei","Courier";
+    font-size: 28px;
+    padding: 0px;
+}
