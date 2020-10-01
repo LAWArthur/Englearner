@@ -114,81 +114,14 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 24px;
 }
 
-.menu .title .field {
-    margin: 10px;
-    display: inline;
-    font-size: 16px;
-    color: grey;
-}
-
-.menu .origin {
-    text-align: right;
-    font-size: 12px;
-    padding: 5px;
-    color: #111111;
-}
-
-.menu .difficulty {
-    text-align: right;
-    font-size: 14px;
-    padding: 2px;
-    color: black;
-}
-
-.difficulty * {
-    color: white;
-    border-radius: 2px;
-    padding: 1px 2px;
-}
-
-.difficulty .easy {
-    background: lime;
-}
-
-.difficulty .medium {
-    background: yellowgreen;
-}
-
-.difficulty .hard {
-    background: firebrick;
-}
-
-.difficulty .beginner {
-    background: grey;
-}
-
-.difficulty .semijunior {
-    background: orange;
-}
-
-.difficulty .junior {
-    background: yellowgreen;
-}
-
-.difficulty .senior {
-    background: lime;
-}
-
-.difficulty .semiselection {
-    background: deepskyblue;
-}
-
-.difficulty .selection {
-    background: purple;
-}
-
-.difficulty .noi {
-    background:  darkslateblue;
-}
-
-blockquote {
-    background: #eeeeeecc;
-    border-left: 3px solid #cccccc;
+.subtitle {
+    font-size: 32px;
     padding: 10px;
-    font-family: "楷体";
 }
 
-.content>.title {
+.question {
+    font-family: "Microsoft Yahei","Courier";
+    text-emphasis: bold;
     font-size: 36px;
-    padding: 10px;
+    text-align: center;
 }
