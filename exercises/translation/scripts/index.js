@@ -35,18 +35,19 @@ function getVocabularies(){
 }
 
 function initializeExercise(){
-    $(".vocabname").text(vocabulary.name);
-    $(".check").click(check);
+    $("#vocabname").text(vocabulary.name);
+    $("#check").click(check);
     generate();
 }
 
 function generate(){
     $(".correct").hide();
     $(".wrong").hide();
+    $("#trans").val("");
     current = vocabulary.vocabulary[Math.floor(Math.random()*vocabulary.vocabulary.length)];
     let meaning = current.meanings[Math.floor(Math.random()*current.meanings.length)];
     let translation = meaning.translations[Math.floor(Math.random()*meaning.translations.length)];
-    $(".question").text(`${meaning.type}. ${onetranslation?translation:meaning.translations.join("；")}`);
+    $(".question").text(`${meaning.type}. ${oneTranslation?translation:meaning.translations.join("；")}`);
     if(showFirst) $("#firstletter").text(current.word[0]);
 }
 
