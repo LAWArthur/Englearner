@@ -37,12 +37,14 @@ function getVocabularies(){
 function initializeExercise(){
     $("#vocabname").text(vocabulary.name);
     $("#check").click(check);
+    $("#next").click(generate);
     generate();
 }
 
 function generate(){
     $(".correct").hide();
     $(".wrong").hide();
+    $(".operations").hide();
     $("#trans").val("");
     current = vocabulary.vocabulary[Math.floor(Math.random()*vocabulary.vocabulary.length)];
     let meaning = current.meanings[Math.floor(Math.random()*current.meanings.length)];
@@ -70,8 +72,10 @@ function check(){
 
 function correct(){
     $(".correct").show();
+    $(".operations").show();
 }
 
 function wrong(){
     $(".wrong").show();
+    $(".operations").show();
 }
