@@ -38,6 +38,11 @@ function initializeExercise(){
     $("#vocabname").text(vocabulary.name);
     $("#check").click(check);
     $("#next").click(generate);
+    $("#trans").keyup((e)=>{
+        if(e.keyCode==0x0D){
+            check();
+        }
+    });
     generate();
 }
 
@@ -46,6 +51,7 @@ function generate(){
     $(".wrong").hide();
     $(".operations").hide();
     $("#trans").val("");
+    $("#trans").unbind("keyup",nextEvent)
     current = vocabulary.vocabulary[Math.floor(Math.random()*vocabulary.vocabulary.length)];
     let meaning = current.meanings[Math.floor(Math.random()*current.meanings.length)];
     let translation = meaning.translations[Math.floor(Math.random()*meaning.translations.length)];
@@ -54,6 +60,10 @@ function generate(){
 }
 
 function check(){
+    $(".operations").show();
+
+    $("#trans").bind("keyup",nextEvent)
+
     let answer = $("#trans").val();
     if(showFirst) answer = current.word[0] + answer;
 
@@ -72,10 +82,14 @@ function check(){
 
 function correct(){
     $(".correct").show();
-    $(".operations").show();
 }
 
 function wrong(){
     $(".wrong").show();
-    $(".operations").show();
+}
+
+function nextEvent(e){
+    if(e.keyCode==0x27){
+        generate();
+    }
 }
