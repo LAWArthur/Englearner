@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="DataModifier.EditableList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DataModifier"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="controlBase">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="{Binding ElementName=controlBase, Path=Title}"></Label>
+            <Label Style="{StaticResource SubLabelStyle}" Content="{Binding ElementName=controlBase, Path=Subtitle}"></Label>
+        </StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <ListView Grid.RowSpan="2" x:Name="phonicChangesList" ItemsSource="{Binding Items}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBox Text="{Binding Value}" MinWidth="100"></TextBox>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <local:AddDeleteButton Orientation="Vertical" AddButtonClick="PhonicsAdd_Click" DeleteButtonClick="PhonicsDelete_Click" Grid.Column="1"></local:AddDeleteButton>
+        </Grid>
+    </StackPanel>
+</UserControl>

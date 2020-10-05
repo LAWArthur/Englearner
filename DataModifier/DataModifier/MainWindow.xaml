@@ -1,0 +1,18 @@
+﻿<Window x:Class="DataModifier.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataModifier"
+        mc:Ignorable="d"
+        Title="Englearner 词库系统" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="204*"></RowDefinition>
+            <RowDefinition Height="215*"/>
+        </Grid.RowDefinitions>
+        <Button Content="修改词库" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="295" 
+                RenderTransformOrigin="-0.473,-2.368" Height="56" Style="{StaticResource BigButtonStyle}" Click="ModifyVocabulary"/>
+    </Grid>
+</Window>

@@ -1,15 +1,33 @@
 {
-    "name":"中考考纲词汇/词组",
-    "vocabulary":[
+  "name": "中考考纲词汇/词组",
+  "vocabulary": [
+    {
+      "meanings": [
         {
-            "word": "a",
-            "meanings": [
-                {
-                    "translations": ["一","一个"],
-                    "type": "adj"
-                }
-            ],
-            "phonic_changes": ["an"]
+          "translations": [
+            "一",
+            "一个",
+            "一只"
+          ],
+          "type": "art",
+          "verb_transformations": [],
+          "adjective_transformations": []
         }
-    ]
+      ],
+      "phonic_changes": [
+        "an"
+      ],
+      "word": "a"
+    },
+    {
+      "meanings": [],
+      "phonic_changes": [],
+      "word": "alpha"
+    },
+    {
+      "meanings": [],
+      "phonic_changes": [],
+      "word": "beta"
+    }
+  ]
 }

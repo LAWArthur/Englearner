@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DataModifier.VocabularyModifier">
+    <LinearGradientBrush x:Key="BigButtonBorderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#28ff0000" Offset="0.1" />
+        <GradientStop Color="#08ff0000" Offset="0.9" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BigButtonBackgroundBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#18000000" Offset="0.1" />
+        <GradientStop Color="#08000000" Offset="0.9" />
+    </LinearGradientBrush>
+
+    <Style x:Key="BigButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource BigButtonBackgroundBrush}"></Setter>
+        <Setter Property="BorderBrush" Value="{StaticResource BigButtonBorderBrush}"></Setter>
+        <Setter Property="BorderThickness" Value="3"></Setter>
+        <Setter Property="FontFamily" Value="等线"></Setter>
+        <Setter Property="FontSize" Value="30"></Setter>
+    </Style>
+
+    <Style x:Key="SubLabelStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="14">
+        </Setter>
+        <Setter Property="Foreground" Value="#cccccc"></Setter>
+    </Style>
+</ResourceDictionary>
