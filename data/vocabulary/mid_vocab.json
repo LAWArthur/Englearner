@@ -20,12 +20,52 @@
       "word": "a"
     },
     {
-      "meanings": [],
+      "meanings": [
+        {
+          "translations": [
+            "第一的"
+          ],
+          "type": "adj",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
       "phonic_changes": [],
       "word": "alpha"
     },
     {
-      "meanings": [],
+      "meanings": [
+        {
+          "translations": [
+            "最好的"
+          ],
+          "type": "adj",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        },
+        {
+          "translations": [
+            "最好的人或物"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "best"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "第二的"
+          ],
+          "type": "adj",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
       "phonic_changes": [],
       "word": "beta"
     }

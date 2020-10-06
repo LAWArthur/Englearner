@@ -1,5 +1,7 @@
 let showFirst,loadFormer,oneTranslation;
 let vocabulary;
+let rangeStart,rangeEnd;
+let sindex,eindex;
 const vocabularies={
     "mid_vocab": "中考考纲词汇/词组"
 };
@@ -12,6 +14,9 @@ let current;
         showFirst = $("#showfirst").prop("checked");
         loadFormer = $("#loadformer").prop("checked");
         oneTranslation = $("#onetranslation").prop("checked");
+        rangeStart = $("#from").val();
+        rangeEnd = $("#to").val();
+
         console.log(showFirst,loadFormer);
         $.get(`../../data/vocabulary/${$("#vocabulary").val()}.json`,(data,status) => {
             if(status=="success"){
@@ -43,6 +48,7 @@ function initializeExercise(){
             check();
         }
     });
+    getPosition();
     generate();
 }
 
@@ -52,7 +58,7 @@ function generate(){
     $(".operations").hide();
     $("#trans").val("");
     $("#trans").unbind("keyup",nextEvent)
-    current = vocabulary.vocabulary[Math.floor(Math.random()*vocabulary.vocabulary.length)];
+    current = vocabulary.vocabulary[Math.floor(Math.random()*(eindex-sindex+1)+sindex)];
     let meaning = current.meanings[Math.floor(Math.random()*current.meanings.length)];
     let translation = meaning.translations[Math.floor(Math.random()*meaning.translations.length)];
     $(".question").text(`${meaning.type}. ${oneTranslation?translation:meaning.translations.join("；")}`);
@@ -85,11 +91,36 @@ function correct(){
 }
 
 function wrong(){
+    $("#correctanswer").text(current.word);
     $(".wrong").show();
 }
 
 function nextEvent(e){
     if(e.keyCode==0x27){
         generate();
+    }
+}
+
+function getPosition(){
+    if(rangeStart!=null&&rangeStart!=""&&rangeEnd!=null&&rangeEnd!=""){
+        let l=0,r=vocabulary.vocabulary.length-1,mid;
+        while(l<r){
+            mid=(l+r)>>1;
+            if(rangeStart<=vocabulary.vocabulary[mid].word)r=mid;
+            else l=mid+1;
+        }
+        sindex = r;
+
+        l=0;r=vocabulary.vocabulary.length-1;
+
+        while(l<r){
+            mid=(l+r+1)>>1;
+            if(rangeEnd>=vocabulary.vocabulary[mid].word)l=mid;
+            else r=mid-1;
+        }
+        eindex = l;
+    }
+    else{
+        sindex = 0;eindex = vocabulary.vocabulary.length-1;
     }
 }

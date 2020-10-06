@@ -35,6 +35,7 @@
                 <br />
                 <input type="checkbox" id="onetranslation" />仅显示一个注释
                 <br />
+                <label>复习范围（完整的单词或单词前缀皆可）：</label><input id="from" />~<input id="to" />
                 <button type="button" id="start">开始</button>
             </div>
             <div class="exercise">
@@ -50,6 +51,7 @@
                 <div class="correct"><div class="correctanswer">正确</div></div>
                 <div class="wrong">
                     <div class="wronganswer">错误</div>
+                    <div class="correctanswer" id="correctanswer"></div>
                     不太会？<button id="addset">加入错题集</button>
                 </div>
                 <div class="operations">
