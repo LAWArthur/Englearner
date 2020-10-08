@@ -5,9 +5,7 @@
       "meanings": [
         {
           "translations": [
-            "一",
-            "一个",
-            "一只"
+            "一（个）"
           ],
           "type": "art",
           "verb_transformations": [],
@@ -23,29 +21,8 @@
       "meanings": [
         {
           "translations": [
-            "第一的"
-          ],
-          "type": "adj",
-          "verb_transformations": [],
-          "adjective_transformations": []
-        }
-      ],
-      "phonic_changes": [],
-      "word": "alpha"
-    },
-    {
-      "meanings": [
-        {
-          "translations": [
-            "最好的"
-          ],
-          "type": "adj",
-          "verb_transformations": [],
-          "adjective_transformations": []
-        },
-        {
-          "translations": [
-            "最好的人或物"
+            "能力",
+            "才能"
           ],
           "type": "n",
           "verb_transformations": [],
@@ -53,13 +30,14 @@
         }
       ],
       "phonic_changes": [],
-      "word": "best"
+      "word": "ability"
     },
     {
       "meanings": [
         {
           "translations": [
-            "第二的"
+            "能够",
+            "有能力的"
           ],
           "type": "adj",
           "verb_transformations": [],
@@ -67,7 +45,481 @@
         }
       ],
       "phonic_changes": [],
-      "word": "beta"
+      "word": "able"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "关于"
+          ],
+          "type": "prep",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        },
+        {
+          "translations": [
+            "大约"
+          ],
+          "type": "adv",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "about"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "在（或向）上面",
+            "在（或向）较高处"
+          ],
+          "type": "adv",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        },
+        {
+          "translations": [
+            "在……上方",
+            "往……上方"
+          ],
+          "type": "prep",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "above"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "在国外",
+            "到国外"
+          ],
+          "type": "adv",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "abroad"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "缺席的",
+            "缺乏的"
+          ],
+          "type": "adj",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "absent"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "接受",
+            "认可"
+          ],
+          "type": "v",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "accept"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "（交通）事故",
+            "意外遭遇"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "accident"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "账目"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "account"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "会计人员"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "accountant"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "精确的",
+            "正确无误的"
+          ],
+          "type": "adj",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "accurate"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "疼",
+            "痛"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "ache"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "（凭长期努力）达到（某目标）"
+          ],
+          "type": "v",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "achieve"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "穿过",
+            "越过"
+          ],
+          "type": "prep",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "across"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "表演",
+            "扮演"
+          ],
+          "type": "v",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        },
+        {
+          "translations": [
+            "行动"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "act"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "行动",
+            "活动"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "action"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "积极的",
+            "主动的"
+          ],
+          "type": "adj",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "active"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "活动"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "activity"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "男演员"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "actor"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "女演员"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "actress"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "实际地",
+            "现实地"
+          ],
+          "type": "adv",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "actually"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "加",
+            "添加",
+            "增加"
+          ],
+          "type": "v",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "add"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "增加"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "addition"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "地址"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "address"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "承认"
+          ],
+          "type": "v",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "admit"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "收养"
+          ],
+          "type": "v",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "adopt"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "成年人"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "adult"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "优势",
+            "优点",
+            "有利条件"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "advantage"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "冒险",
+            "冒险经历",
+            "冒险精神"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        },
+        {
+          "translations": [
+            "冒险"
+          ],
+          "type": "v",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "adventure"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "广告"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "advertisement"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "劝告",
+            "忠告"
+          ],
+          "type": "n",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "advice"
+    },
+    {
+      "meanings": [
+        {
+          "translations": [
+            "建议",
+            "劝告",
+            "忠告"
+          ],
+          "type": "v",
+          "verb_transformations": [],
+          "adjective_transformations": []
+        }
+      ],
+      "phonic_changes": [],
+      "word": "advise"
     }
   ]
 }

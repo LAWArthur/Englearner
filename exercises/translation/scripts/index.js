@@ -9,6 +9,7 @@ let current;
 
 ($(()=>{
     getVocabularies();
+    $(".exercise").hide();
 
     $("#start").click(()=>{
         showFirst = $("#showfirst").prop("checked");
@@ -40,6 +41,7 @@ function getVocabularies(){
 }
 
 function initializeExercise(){
+    $(".exercise").show();
     $("#vocabname").text(vocabulary.name);
     $("#check").click(check);
     $("#next").click(generate);
