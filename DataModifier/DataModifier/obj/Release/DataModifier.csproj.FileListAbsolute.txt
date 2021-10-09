@@ -51,3 +51,7 @@ E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataMo
 E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.csproj.CopyComplete
 E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.exe
 E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.pdb
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Release\DataModifier.exe.manifest
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Release\DataModifier.application
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.exe.manifest
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.application
