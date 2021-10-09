@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DataModifier"
         mc:Ignorable="d"
         Title="Englearner 词库系统" Height="450" Width="800">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="204*"></RowDefinition>

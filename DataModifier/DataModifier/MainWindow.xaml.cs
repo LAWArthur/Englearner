@@ -23,6 +23,7 @@ namespace DataModifier
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void ModifyVocabulary(object sender, RoutedEventArgs e)

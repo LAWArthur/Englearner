@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-d:\Documents\Englearner\DataModifier\DataModifier\obj\Debug\
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\
 DataModifier
 none
 false
 DEBUG;TRACE
-d:\Documents\Englearner\DataModifier\DataModifier\App.xaml
-5-858287337
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\App.xaml
+5-1138000043
 
-10-1239078609
-141187231125
+92093035657
+151527871957
 AddDeleteButton.xaml;EditableList.xaml;MainWindow.xaml;Resource1.xaml;VocabularyModifier\VocabularyModifierPage.xaml;
 
-True
+False
 

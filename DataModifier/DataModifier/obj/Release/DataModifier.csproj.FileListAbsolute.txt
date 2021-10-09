@@ -24,3 +24,30 @@ D:\Documents\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.cspro
 D:\Documents\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.csproj.CopyComplete
 D:\Documents\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.exe
 D:\Documents\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.pdb
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Release\DataModifier.exe.config
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Release\DataModifier.exe
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Release\DataModifier.pdb
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Release\Newtonsoft.Json.dll
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Release\Newtonsoft.Json.xml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.csproj.AssemblyReference.cache
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\AddDeleteButton.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\EditableList.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\MainWindow.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\VocabularyModifier\VocabularyModifierPage.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\App.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\GeneratedInternalTypeHelper.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier_MarkupCompile.cache
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier_MarkupCompile.lref
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\App.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\AddDeleteButton.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\EditableList.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\MainWindow.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\Resource1.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\VocabularyModifier\VocabularyModifierPage.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.g.resources
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.Properties.Resources.resources
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.csproj.GenerateResource.cache
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.csproj.CoreCompileInputs.cache
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.csproj.CopyComplete
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.exe
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Release\DataModifier.pdb

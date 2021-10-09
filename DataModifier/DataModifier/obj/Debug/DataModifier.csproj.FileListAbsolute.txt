@@ -24,3 +24,30 @@ D:\Documents\Englearner\DataModifier\DataModifier\obj\Debug\EditableList.baml
 D:\Documents\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier.csprojAssemblyReference.cache
 D:\Documents\Englearner\DataModifier\DataModifier\obj\Debug\AddDeleteButton.g.cs
 D:\Documents\Englearner\DataModifier\DataModifier\obj\Debug\AddDeleteButton.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Debug\DataModifier.exe.config
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Debug\DataModifier.exe
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Debug\DataModifier.pdb
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Debug\Newtonsoft.Json.dll
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\bin\Debug\Newtonsoft.Json.xml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\AddDeleteButton.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\EditableList.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\MainWindow.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\VocabularyModifier\VocabularyModifierPage.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\App.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier_MarkupCompile.cache
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier_MarkupCompile.lref
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\App.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\AddDeleteButton.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\EditableList.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\MainWindow.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\Resource1.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\VocabularyModifier\VocabularyModifierPage.baml
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier.g.resources
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier.Properties.Resources.resources
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier.csproj.GenerateResource.cache
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier.csproj.CoreCompileInputs.cache
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier.csproj.CopyComplete
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier.exe
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier.pdb
+E:\Projects\Web Projects\Englearner\DataModifier\DataModifier\obj\Debug\DataModifier.csproj.AssemblyReference.cache

@@ -70,7 +70,7 @@ function generate(){
 function check(){
     $(".operations").show();
 
-    $("#trans").bind("keyup",nextEvent)
+    $("#trans").bind("keyup",nextEvent);
 
     let answer = $("#trans").val();
     if(showFirst) answer = current.word[0] + answer;
@@ -125,4 +125,14 @@ function getPosition(){
     else{
         sindex = 0;eindex = vocabulary.vocabulary.length-1;
     }
+}
+
+function endTraining(){
+    $(".exercise").hide();
+    $("#vocabname").text(vocabulary.name);
+    $("#check").unbind();
+    $("#next").unbind();
+    $("#trans").unbind();
+    $("#trans").unbind();
+    $(".settings").show();
 }

@@ -24,12 +24,14 @@
         <DockPanel Grid.ColumnSpan="2">
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="文件">
-                    <MenuItem x:Name="openFile" Header="打开" Click="openFile_Click"></MenuItem>
-                    <MenuItem x:Name="saveFile" Header="保存" Click="saveFile_Click"></MenuItem>
-                    <MenuItem x:Name="createFile" Header="新建" Click="createFile_Click"></MenuItem>
+                    <MenuItem x:Name="openFile" Header="打开" Command="{DynamicResource OpenCommand}"></MenuItem>
+                    <MenuItem x:Name="saveFile" Header="保存" Command="{DynamicResource SaveCommand}"></MenuItem>
+                    <MenuItem x:Name="saveAs" Header="另存为" Command="{DynamicResource SaveAsCommand}"></MenuItem>
+                    <MenuItem x:Name="createFile" Header="新建" Command="{DynamicResource NewCommand}"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="编辑">
                     <MenuItem x:Name="sortWords" Header="排序单词" Click="sortWords_Click"></MenuItem>
+                    <MenuItem x:Name="rename" Header="重命名词库" Click="rename_Click"></MenuItem>
                 </MenuItem>
             </Menu>
         </DockPanel>
@@ -84,4 +86,26 @@
         </ScrollViewer>
         
     </Grid>
+
+
+    <Page.Resources>
+        <RoutedCommand x:Key="SaveCommand"></RoutedCommand>
+        <RoutedCommand x:Key="SaveAsCommand"></RoutedCommand>
+        <RoutedCommand x:Key="NewCommand"></RoutedCommand>
+        <RoutedCommand x:Key="OpenCommand"></RoutedCommand>
+    </Page.Resources>
+
+    <Page.InputBindings>
+        <KeyBinding Command="{StaticResource SaveCommand}" Modifiers="Ctrl" Key="S"/>
+        <KeyBinding Command="{StaticResource SaveAsCommand}" Modifiers="Ctrl+Shift" Key="S"></KeyBinding>
+        <KeyBinding Command="{StaticResource NewCommand}" Key="N" Modifiers="Ctrl"></KeyBinding>
+        <KeyBinding Command="{StaticResource OpenCommand}" Key="O" Modifiers="Ctrl"></KeyBinding>
+    </Page.InputBindings>
+
+    <Page.CommandBindings>
+        <CommandBinding Command="{StaticResource SaveCommand}" Executed="saveFile_Execute"></CommandBinding>
+        <CommandBinding Command="{StaticResource SaveAsCommand}" Executed="saveAs_Execute"></CommandBinding>
+        <CommandBinding Command="{StaticResource OpenCommand}" Executed="openFile_Execute"></CommandBinding>
+        <CommandBinding Command="{StaticResource NewCommand}" Executed="createFile_Execute"></CommandBinding>
+    </Page.CommandBindings>
 </Page>

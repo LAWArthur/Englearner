@@ -43,27 +43,51 @@ namespace DataModifier.VocabularyModifier
             //        SaveFile();
             //    }
             //};
+
+            
         }
 
-        private void openFile_Click(object sender, RoutedEventArgs e)
+        private string filePath;
+
+        private void openFile_Execute(object sender, ExecutedRoutedEventArgs e)
         {
+            if (vocabulary != null) QuerySave();
+
             var openFileDialog = new Microsoft.Win32.OpenFileDialog { Filter = "JSON 文件(*.json)|*.json", Multiselect = false };
             var result = openFileDialog.ShowDialog();
             if (result != true) {
                 return;
             }
 
-            var path = openFileDialog.FileName;
+            filePath = openFileDialog.FileName;
 
-            var data = File.ReadAllText(path);
+            var data = File.ReadAllText(filePath);
 
-            vocabulary = JObject.Parse(data);
-
-            InitializeVocabulary();
+            InitializeVocabulary(JObject.Parse(data));
         }
 
-        private void saveFile_Click(object sender, RoutedEventArgs e)
+        private void saveFile_Execute(object sender, ExecutedRoutedEventArgs e)
         {
+            TrySaveFile();
+        }
+
+        private void saveAs_Execute(object sender, ExecutedRoutedEventArgs e)
+        {
+            SaveAs();
+        }
+
+        private void TrySaveFile()
+        {
+            if (!string.IsNullOrEmpty(filePath)) SaveFile();
+            else SaveAs();
+        }
+
+        private void SaveAs()
+        {
+            var saveFileDialog = new Microsoft.Win32.SaveFileDialog() { AddExtension = true, DefaultExt = "*.json", Filter = "JSON 文件(*.json)|*.json" };
+            var result = saveFileDialog.ShowDialog();
+            if (result != true) return;
+            filePath = saveFileDialog.FileName;
             SaveFile();
         }
 
@@ -71,24 +95,26 @@ namespace DataModifier.VocabularyModifier
         {
             if (vocabulary == null) return;
             SortWords();
-            var saveFileDialog = new Microsoft.Win32.SaveFileDialog() { AddExtension = true, DefaultExt = "*.json", Filter = "JSON 文件(*.json)|*.json" };
-            var result = saveFileDialog.ShowDialog();
-            if (result != true) return;
+
             vocabulary["vocabulary"] = JArray.FromObject(words);
-            File.WriteAllText(saveFileDialog.FileName, vocabulary.ToString());
+            File.WriteAllText(filePath, vocabulary.ToString(Newtonsoft.Json.Formatting.None));
         }
 
-        private void createFile_Click(object sender, RoutedEventArgs e)
+        private void createFile_Execute(object sender, ExecutedRoutedEventArgs e)
         {
-            vocabulary = JObject.Parse(@"{" +
+            if (vocabulary != null) QuerySave();
+            filePath = null;
+            InitializeVocabulary(JObject.Parse(@"{" +
                 "\"name\":\"\"," +
                 "\"vocabulary\":[]" +
-                "}");
-            InitializeVocabulary();
+                "}"));
+            Rename();
         }
 
-        private void InitializeVocabulary()
+        private void InitializeVocabulary(JObject vocabulary)
         {
+            this.vocabulary = vocabulary;
+
             vocabularyName.Text = vocabulary.Value<string>("name");
             words = vocabulary["vocabulary"].ToObject<ObservableCollection<Word>>();
             overallList.ItemsSource = words;
@@ -153,6 +179,37 @@ namespace DataModifier.VocabularyModifier
             if (words == null) return;
             words = new ObservableCollection<Word>(words.OrderBy((e) => e));
             overallList.ItemsSource = words;
+        }
+
+        private void rename_Click(object sender, RoutedEventArgs e)
+        {
+            Rename();
+        }
+
+        private void Rename()
+        {
+            vocabulary["name"] = Microsoft.VisualBasic.Interaction.InputBox(vocabulary.Value<string>("name"), "重命名...", vocabulary.Value<string>("name"));
+            vocabularyName.Text = vocabulary.Value<string>("name");
+        }
+
+        protected override void OnInitialized(EventArgs e)
+        {
+            base.OnInitialized(e);
+            Dispatcher.ShutdownStarted += Dispatcher_ShutdownStarted;
+        }
+
+        private void Dispatcher_ShutdownStarted(object sender, EventArgs e)
+        {
+            QuerySave();
+        }
+
+        private void QuerySave()
+        {
+            if (vocabulary == null) return;
+            if (MessageBox.Show(string.Format("是否要保存 {0}", vocabulary["name"]), "关闭", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                TrySaveFile();
+            }
         }
     }
 }
