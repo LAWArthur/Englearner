@@ -6,8 +6,10 @@ const vocabularies={
     "mid_vocab": "中考考纲词汇/词组"
 };
 let current;
+let canLoad = false;
 
 ($(()=>{
+    canLoad = checkFileAPI();
     getVocabularies();
     $(".exercise").hide();
 
@@ -20,19 +22,41 @@ let current;
         pageStart = parseInt($("#pgfrom").val());
         pageEnd = parseInt($("#pgto").val());
 
-        console.log(showFirst,loadFormer);
-        $.get(`../../data/vocabulary/${$("#vocabulary").val()}.json`,(data,status) => {
-            if(status=="success"){
-                vocabulary = data;
-                initializeExercise();
-            }
-            else console.log(`Error ${status}`);
-        });
-
-        $(".settings").hide();        
+        if($("#vocabulary").val() == 0) loadVocabularyFromLocal();
+        else loadVocabulary();
     })
 }))();
 
+function loadVocabulary(){
+    $.get(`../../data/vocabulary/${$("#vocabulary").val()}.json`,(data,status) => {
+        if(status=="success"){
+            vocabulary = data;
+            initializeExercise();
+            $(".settings").hide();
+        }
+        else console.log(`Error ${status}`);
+    });  
+}
+
+function loadVocabularyFromLocal(){
+    vocFile = $("#loadvocab")[0].files[0];
+    let reader = new FileReader();
+    reader.onload = (e) => {
+        vocabulary = JSON.parse(this.result);
+        initializeExercise();
+        $(".settings").hide();
+    }
+
+    reader.onerror = (e) => {
+        alert("文件读取错误");
+    }
+
+    reader.readAsText(vocFile);
+}
+
+function checkFileAPI(){
+    return window.File && window.FileList && window.FileReader && window.Blob;
+}
 
 function getVocabularies(){
     let sel = $("#vocabulary");
@@ -40,6 +64,8 @@ function getVocabularies(){
     for(let i in vocabularies){
         sel.append($("<option></option>").val(i).text(vocabularies[i]));
     }
+
+    sel.append($("<option></option>").val(0).text("从本地加载"));
 }
 
 function initializeExercise(){
