@@ -42,6 +42,7 @@ function loadVocabularyFromLocal(){
     vocFile = $("#loadvocab")[0].files[0];
     let reader = new FileReader();
     reader.onload = (e) => {
+        console.log(this.result);
         vocabulary = JSON.parse(this.result);
         initializeExercise();
         $(".settings").hide();
