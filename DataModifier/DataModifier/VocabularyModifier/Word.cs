@@ -54,6 +54,19 @@ namespace DataModifier.VocabularyModifier
         }
 
         [JsonIgnore]
+        private int m_Paging;
+        public int paging
+        {
+            get => m_Paging;
+            set
+            {
+                if (value >= 0) m_Paging = value;
+                OnPropertyChanged(this, "paging");
+                OnPropertyChanged(this, "Summary");
+            }
+        }
+
+        [JsonIgnore]
         public ObservableCollection<string> PhonicChanges { get
             {
                 if (phonic_changes == null) phonic_changes = new ObservableCollection<string>();
@@ -85,11 +98,15 @@ namespace DataModifier.VocabularyModifier
 
         public static string GetSummary(Word el)
         {
+            StringBuilder res = new StringBuilder();
+
             if (el.PhonicChanges.Count > 0)
             {
-                return el.word + "/" + el.PhonicChanges.Aggregate((sum, e) => sum += "/" + e);
+                res.Append(el.word + "/" + el.PhonicChanges.Aggregate((sum, e) => sum += "/" + e));
             }
-            return el.word;
+            res.Append(el.word);
+            res.Insert(0, string.Format("[{0}] ", el.paging));
+            return res.ToString();
         }
 
         public void OnPropertyChanged(object sender, string property)
@@ -189,5 +206,36 @@ namespace DataModifier.VocabularyModifier
     public class AdjectiveTransformation : Transformation
     {
         public string comparative, superlative;
+    }
+
+    public class DefaultWordComparer : IComparer<Word>
+    {
+        public int Compare(Word x, Word y)
+        {
+            return x.word.CompareTo(y.word);
+        }
+
+        public static DefaultWordComparer instance;
+
+        static DefaultWordComparer()
+        {
+            instance = new DefaultWordComparer();
+        }
+    }
+
+    public class WordPageComparer : IComparer<Word>
+    {
+        public int Compare(Word x, Word y)
+        {
+            if (x.paging - y.paging != 0) return x.paging - y.paging;
+            else return x.word.CompareTo(y.word);
+        }
+
+        public static WordPageComparer instance;
+
+        static WordPageComparer()
+        {
+            instance = new WordPageComparer();
+        }
     }
 }

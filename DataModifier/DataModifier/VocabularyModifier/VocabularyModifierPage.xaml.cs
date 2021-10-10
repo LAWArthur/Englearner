@@ -130,6 +130,10 @@ namespace DataModifier.VocabularyModifier
             {
                 words.Add(new Word());
                 overallList.SelectedIndex = words.Count - 1;
+                if(words.Count > 1)
+                {
+                    words[words.Count - 1].paging = words[words.Count - 2].paging;
+                }
             }
         }
 
@@ -177,7 +181,14 @@ namespace DataModifier.VocabularyModifier
         private void SortWords()
         {
             if (words == null) return;
-            words = new ObservableCollection<Word>(words.OrderBy((e) => e));
+            words = new ObservableCollection<Word>(words.OrderBy((e) => e, DefaultWordComparer.instance));
+            overallList.ItemsSource = words;
+        }
+
+        private void SortWordsByPages()
+        {
+            if (words == null) return;
+            words = new ObservableCollection<Word>(words.OrderBy((e) => e, WordPageComparer.instance));
             overallList.ItemsSource = words;
         }
 
@@ -206,10 +217,15 @@ namespace DataModifier.VocabularyModifier
         private void QuerySave()
         {
             if (vocabulary == null) return;
-            if (MessageBox.Show(string.Format("是否要保存 {0}", vocabulary["name"]), "关闭", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (MessageBox.Show(string.Format("是否要保存 {0}", vocabulary.Value<string>("name")), "确认", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 TrySaveFile();
             }
+        }
+
+        private void sortByPaging_Click(object sender, RoutedEventArgs e)
+        {
+            SortWordsByPages();
         }
     }
 }

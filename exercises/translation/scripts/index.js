@@ -1,7 +1,7 @@
-let showFirst,loadFormer,oneTranslation;
-let vocabulary;
-let rangeStart,rangeEnd;
-let sindex,eindex;
+let showFirst = false,loadFormer = false,oneTranslation = false;
+let vocabulary = {};
+let rangeStart = 0,rangeEnd = 0,pageStart = 0,pageEnd = 0;
+let sindex = 0,eindex = 0;
 const vocabularies={
     "mid_vocab": "中考考纲词汇/词组"
 };
@@ -17,6 +17,8 @@ let current;
         oneTranslation = $("#onetranslation").prop("checked");
         rangeStart = $("#from").val();
         rangeEnd = $("#to").val();
+        pageStart = parseInt($("#pgfrom").val());
+        pageEnd = parseInt($("#pgto").val());
 
         console.log(showFirst,loadFormer);
         $.get(`../../data/vocabulary/${$("#vocabulary").val()}.json`,(data,status) => {
@@ -45,11 +47,13 @@ function initializeExercise(){
     $("#vocabname").text(vocabulary.name);
     $("#check").click(check);
     $("#next").click(generate);
+    $("#end").click(endTraining);
     $("#trans").keyup((e)=>{
         if(e.keyCode==0x0D){
             check();
         }
     });
+    extractPages();
     getPosition();
     generate();
 }
@@ -103,6 +107,13 @@ function nextEvent(e){
     }
 }
 
+function extractPages(){
+    pageStart = pageStart || 0;
+    pageEnd = pageEnd || Infinity;
+
+    vocabulary.vocabulary = vocabulary.vocabulary.filter((el) => el.paging >= pageStart && el.paging <= pageEnd);
+}
+
 function getPosition(){
     if(rangeStart!=null&&rangeStart!=""&&rangeEnd!=null&&rangeEnd!=""){
         let l=0,r=vocabulary.vocabulary.length-1,mid;
@@ -134,5 +145,6 @@ function endTraining(){
     $("#next").unbind();
     $("#trans").unbind();
     $("#trans").unbind();
+    $("#end").unbind();
     $(".settings").show();
 }

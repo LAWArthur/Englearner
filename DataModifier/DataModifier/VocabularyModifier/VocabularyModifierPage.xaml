@@ -31,6 +31,7 @@
                 </MenuItem>
                 <MenuItem Header="编辑">
                     <MenuItem x:Name="sortWords" Header="排序单词" Click="sortWords_Click"></MenuItem>
+                    <MenuItem x:Name="sortByPaging" Header="按分页排序" Click="sortByPaging_Click"></MenuItem>
                     <MenuItem x:Name="rename" Header="重命名词库" Click="rename_Click"></MenuItem>
                 </MenuItem>
             </Menu>
@@ -57,9 +58,14 @@
                 <StackPanel x:Name="wordInspector" Margin="5" DataContext="{Binding SelectedWord}">
                     <TextBlock Text="{Binding Summary}" FontSize="24"></TextBlock>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Word:" Target="{Binding ElementName=wordField}">
+                        <Label Content="Word:" Target="{Binding ElementName=wordField}" Width="75">
                         </Label>
                         <TextBox x:Name="wordField" MinWidth="300" Text="{Binding word}"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Paging:" Target="{Binding ElementName=pageField}" Width="75">
+                        </Label>
+                        <TextBox x:Name="pageField" MinWidth="300" Text="{Binding paging}"></TextBox>
                     </StackPanel>
                     <dm:EditableList DataContext="{Binding PhonicChanges}" Title="音素变形" Subtitle="如a/an等意思完全相同，词性相同，词根相同（构型相近）的单词"></dm:EditableList>
 
@@ -96,10 +102,10 @@
     </Page.Resources>
 
     <Page.InputBindings>
-        <KeyBinding Command="{StaticResource SaveCommand}" Modifiers="Ctrl" Key="S"/>
-        <KeyBinding Command="{StaticResource SaveAsCommand}" Modifiers="Ctrl+Shift" Key="S"></KeyBinding>
-        <KeyBinding Command="{StaticResource NewCommand}" Key="N" Modifiers="Ctrl"></KeyBinding>
-        <KeyBinding Command="{StaticResource OpenCommand}" Key="O" Modifiers="Ctrl"></KeyBinding>
+        <KeyBinding Command="{DynamicResource SaveCommand}" Modifiers="Ctrl" Key="S"/>
+        <KeyBinding Command="{DynamicResource SaveAsCommand}" Modifiers="Ctrl+Shift" Key="S"></KeyBinding>
+        <KeyBinding Command="{DynamicResource NewCommand}" Key="N" Modifiers="Ctrl"></KeyBinding>
+        <KeyBinding Command="{DynamicResource OpenCommand}" Key="O" Modifiers="Ctrl"></KeyBinding>
     </Page.InputBindings>
 
     <Page.CommandBindings>

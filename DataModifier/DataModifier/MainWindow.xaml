@@ -15,4 +15,6 @@
         <Button Content="修改词库" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="295" 
                 RenderTransformOrigin="-0.473,-2.368" Height="56" Style="{StaticResource BigButtonStyle}" Click="ModifyVocabulary"/>
     </Grid>
+    
+
 </Window>
