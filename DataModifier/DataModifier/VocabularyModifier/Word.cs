@@ -100,12 +100,14 @@ namespace DataModifier.VocabularyModifier
         {
             StringBuilder res = new StringBuilder();
 
+            res.Append(string.Format("[{0}] ", el.paging));
+
             if (el.PhonicChanges.Count > 0)
             {
                 res.Append(el.word + "/" + el.PhonicChanges.Aggregate((sum, e) => sum += "/" + e));
             }
-            res.Append(el.word);
-            res.Insert(0, string.Format("[{0}] ", el.paging));
+            else res.Append(el.word);
+            
             return res.ToString();
         }
 
