@@ -124,7 +124,7 @@ function correct(){
 }
 
 function wrong(){
-    $("#correctanswer").text(current.word + (current.phonic_changes ? current.phonic_changes.reduce((acc, cur) => acc + "/" + cur) : ""));
+    $("#correctanswer").text((current.phonic_changes ? current.phonic_changes.reduce((acc, cur) => acc + "/" + cur, current.word) : current.word));
     $(".wrong").show();
 }
 
